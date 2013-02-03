@@ -9,7 +9,7 @@ public class CameraFlash extends Activity{
 	public void onContextMenuClosed(Menu menu) {
 		// TODO Auto-generated method stub
 		super.onContextMenuClosed(menu);
-		setContentView(R.layout.);
+		setContentView(R.layout.flash_activity);
 	}
 	
 }

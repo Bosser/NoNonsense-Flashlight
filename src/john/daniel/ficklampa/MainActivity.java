@@ -1,7 +1,5 @@
 package john.daniel.ficklampa;
 
-import john.daniel.lek.MainActivity;
-import john.daniel.lek.NewScreen;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
