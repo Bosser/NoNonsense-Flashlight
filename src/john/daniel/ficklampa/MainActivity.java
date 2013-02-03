@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 	SeekBar bar;
 	TextView textField;
-	Button launchFlash;
+	Button flashlightButton;
 	float setBrightness;
 	float value;
     @Override
@@ -23,8 +23,8 @@ public class MainActivity extends Activity {
         
         
         //Set up button to launch new activity to drive the Flash
-        launchFlash = (Button) findViewById(R.id.launchFlashButton);
-        launchFlash.setOnClickListener(new View.OnClickListener() {
+        flashlightButton = (Button) findViewById(R.id.flashlightButton);
+        flashlightButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -41,8 +41,12 @@ public class MainActivity extends Activity {
         bar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
         	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         		//screenBrightness has float value between 0 and 1. Progress/100 will make a 0.x value to screenBrightness
+        		if (progress <= 0) {
+        			progress = 1;
+        		}
         		setBrightness = (float)progress / 100;
         		value = setBrightness * 100;
+        		
         		WindowManager.LayoutParams layout = getWindow().getAttributes();
         		layout.screenBrightness = setBrightness;
         		getWindow().setAttributes(layout);

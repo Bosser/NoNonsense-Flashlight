@@ -21,12 +21,12 @@
   	    android:paddingTop="8dp"
   	    />
 
-  	<Button 
-  	    android:id="@+id/launchFlashButton"
-  	    android:text="Camera Flash"
-  	    android:layout_height="wrap_content"
+  	<Button
+  	    android:id="@+id/flashlightButton"
   	    android:layout_width="fill_parent"
-  	    android:layout_alignParentBottom="true" >
+  	    android:layout_height="wrap_content"
+  	    android:layout_alignParentBottom="true"
+  	    android:text="Camera Flash" >
   	    
   	</Button>
 
